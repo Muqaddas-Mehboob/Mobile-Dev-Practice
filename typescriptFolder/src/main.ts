@@ -25,3 +25,13 @@ let newItems: string[] = ["date", "elderberry", "fig"];
 console.log(`Items: ${items.join(", ")}`);
 console.log(`New items: ${newItems.join(", ")}`);
 console.log(`Combined items: ${[...items, ...newItems].join(", ")}`);
+
+// let names: string[] = ["Mario", "Luigi", "Peach"];
+// names.push("Bowser"); // OK
+// names.push(123); // Error: Type 'number' is not assignable to type 'string'
+// let scores: number[] = [25, 28, 24];
+// scores.push(30); // OK
+// scores.push("high"); // Error: Type 'string' is not assignable to type 'number'
+// let isActive: boolean[] = [true, false, true];
+// isActive.push(false); // OK
+// isActive.push("yes");
