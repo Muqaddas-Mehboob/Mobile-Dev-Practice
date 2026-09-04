@@ -19,3 +19,9 @@ function greet(name: string): string {
     return `Hello, ${name}!`;
 }
 console.log(greet("Alice"));
+
+let items: Array<string | number> = [2, "banana", "cherry"];
+let newItems: string[] = ["date", "elderberry", "fig"];
+console.log(`Items: ${items.join(", ")}`);
+console.log(`New items: ${newItems.join(", ")}`);
+console.log(`Combined items: ${[...items, ...newItems].join(", ")}`);
