@@ -6,7 +6,6 @@ import GoalItem from '../components/GoalItem';
 import MovieItem from '@/components/MovieItem';
 
 type Movie = {
-    id: string;
     name: string;
     year: number;
 };
@@ -59,28 +58,23 @@ export default function HomeScreen() {
 
     const [movies, setMovies] = useState<Movie[]>([
         {
-            id: '1',
             name: 'Anabelle',
             year: 2010,
         },
         {
-            id: '2',
-            name: 'Incidious',
+            name: 'Insidious',
             year: 2014,
         },
         {
-            id: '3',
-            name: 'Conjuring',
+            name: 'The Twilight Saga',
             year: 2008,
         },
         {
-            id: '4',
-            name: 'The Twilight Saga: New Moon',
+            name: 'Conjuring',
             year: 2019,
         },
         {
-            id: '5',
-            name: 'Spider-Man: No Way Home',
+            name: 'Anabelle Return',
             year: 2021,
         },
     ]);
@@ -99,11 +93,11 @@ export default function HomeScreen() {
                 data={movies}
                 renderItem={(itemData) => (
                     <MovieItem
+                        key={itemData.index}
                         name={itemData.item.name}
                         year={itemData.item.year}
                     />
                 )}
-                keyExtractor={(item) => item.id}
             />
 
         </View>
